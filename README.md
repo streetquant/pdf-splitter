@@ -1,6 +1,6 @@
 # PDF/EPUB Chapter Splitter
 
-A powerful CLI tool that automatically splits PDF and EPUB files into chapter-wise sections with smart OCR detection. Perfect for learners using AI-powered study tools.
+A powerful CLI tool that automatically splits PDF and EPUB files into chapter-wise sections with smart OCR detection. Perfect for learners using AI-powered study assistants.
 
 ![Python Version](https://img.shields.io/badge/python-3.9+-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
@@ -42,6 +42,8 @@ Learning from books becomes significantly more effective when combined with AI s
 
 ### ChatGPT Study Mode
 
+ChatGPT Study Mode was launched by OpenAI on **July 29, 2025**. It offers step-by-step guidance instead of quick answers, helping you learn and retain knowledge better.
+
 Upload individual chapter PDFs to ChatGPT and ask:
 
 ```
@@ -52,7 +54,17 @@ Upload individual chapter PDFs to ChatGPT and ask:
 4. Connections to previous chapters"
 ```
 
+**Key Features:**
+- Guided learning with questions, hints, and step-by-step explanations
+- Personalized support that adapts to your skill level
+- Knowledge checks with quizzes and open-ended questions
+- Progress tracking to show mastery and areas to focus
+
+Learn more: [chatgpt.com/features/study-mode](https://chatgpt.com/features/study-mode/)
+
 ### Gemini Guided Learning
+
+Google launched **Guided Learning in Gemini** on **August 6, 2025**. It acts as a personal learning companion that helps you build deep understanding of subjects.
 
 Feed chapters sequentially:
 
@@ -62,19 +74,39 @@ Start with the main thesis, then break down complex concepts,
 and end with practical applications."
 ```
 
+**Key Features:**
+- Interactive study partner for deeper understanding
+- Uploads course material, debug code, or understand concepts
+- Visual responses and interactive study aids
+- Personalized explanations adapting to your needs
+
+Learn more: [blog.google/products/gemini/guided-learning](https://blog.google/products/gemini/guided-learning-google-gemini/)
+
 ### NotebookLM
+
+Google's NotebookLM continues to evolve with powerful AI learning features updated in 2025.
+
+**2025 Features:**
+- **Audio Overviews** - Turn sources into engaging "Deep Dive" discussions
+- **Video Overviews** - Generate video summaries of your documents
+- **Flashcards & Quizzes** - Create from your documents instantly
+- **Learning Guide** - Generate tailored study guides
+- **Mind Maps** - Visualize connections between concepts
+- **Presentations** - Create polished outlines with talking points
 
 Create comprehensive study notebooks:
 
 ```python
-# Batch upload chapters for AI-generated summaries
+# Batch upload chapters for AI-powered learning
 import notebooklm
 
-notebook = notebookl.create(
+notebook = notebooklm.create(
     sources=["chapter_01.pdf", "chapter_02.pdf", "chapter_03.pdf"],
     title="Book Title - AI Study Guide"
 )
 ```
+
+Learn more: [notebooklm.google](https://notebooklm.google/)
 
 ## Features
 
@@ -167,7 +199,7 @@ $ python -m pdfsplitter.cli "Deep Learning.pdf"
 
 ### 2. Study Chapter by Chapter with AI
 
-**Prompt for ChatGPT/Gemini:**
+**Prompt for ChatGPT Study Mode:**
 
 ```
 I'm studying Chapter 3 on Neural Networks from a deep learning book.
@@ -179,16 +211,31 @@ Please:
 5. Recommend which sections to reread
 ```
 
-### 3. Build a NotebookLM Knowledge Base
+**Prompt for Gemini Guided Learning:**
+
+```
+Using the Feynman technique, help me understand this chapter:
+- Start with the main thesis
+- Break down 3 complex concepts
+- End with practical applications in real-world scenarios
+```
+
+**NotebookLM Integration:**
 
 ```python
-# Upload these files to NotebookLM:
-# - chapter_01.pdf through chapter_12.pdf
-# - posttext.pdf (for references)
-
-# NotebookLM will create a comprehensive AI study guide
-# that understands the entire book's context
+# Upload chapters to NotebookLM for comprehensive learning
+# Features: Audio Overviews, Flashcards, Mind Maps, Quizzes
 ```
+
+### 3. Build a Knowledge Base
+
+Combine chapters across multiple AI tools for comprehensive coverage:
+
+| Tool | Best For | Chapter Usage |
+|------|----------|---------------|
+| ChatGPT Study Mode | Interactive Q&A, step-by-step explanations | Upload 1-2 chapters per session |
+| Gemini Guided Learning | Personalized learning paths | Sequential chapter progression |
+| NotebookLM | Audio summaries, flashcards, research | Upload entire book |
 
 ## Supported Patterns
 
