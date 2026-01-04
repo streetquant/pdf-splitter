@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pdfsplitter"
+version = "1.0.0"
+description = "Split PDF and EPUB files into chapters automatically"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "PDFSplitter"}
+]
+dependencies = [
+    "python-dotenv>=1.0.0",
+    "pydantic>=2.0.0",
+    "pydantic-settings>=2.0.0",
+    "pymupdf>=1.23.0",
+    "PyPDF2>=3.0.0",
+    "ebooklib>=0.18.0",
+    "beautifulsoup4>=4.12.0",
+    "click>=8.0.0",
+    "python-magic>=0.4.27",
+    "tqdm>=4.66.0",
+    "openai>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+]
+
+[project.scripts]
+pdfsplitter = "pdfsplitter.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
