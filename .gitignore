@@ -28,3 +28,5 @@ htmlcov/
 .mypy_cache/
 *.pdf_output/
 *.epub_output/
+tests/
+test/
