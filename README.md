@@ -94,19 +94,37 @@ Google's NotebookLM continues to evolve with powerful AI learning features updat
 - **Mind Maps** - Visualize connections between concepts
 - **Presentations** - Create polished outlines with talking points
 
-Create comprehensive study notebooks:
+**How to Use with Split Chapters:**
 
-```python
-# Batch upload chapters for AI-powered learning
-import notebooklm
+NotebookLM is used through the web interface at [notebooklm.google](https://notebooklm.google/). Here's how to use it with this tool's output:
 
-notebook = notebooklm.create(
-    sources=["chapter_01.pdf", "chapter_02.pdf", "chapter_03.pdf"],
-    title="Book Title - AI Study Guide"
-)
+1. **Split your book:**
+   ```bash
+   python -m pdfsplitter.cli "book.pdf"
+   ```
+
+2. **Open NotebookLM** at [notebooklm.google](https://notebooklm.google/)
+
+3. **Click "Upload"** and select the chapter PDFs from the output folder
+
+4. **Use NotebookLM features:**
+   - Click "Audio Overview" to create AI audio discussions
+   - Use "Guide" to generate study guides
+   - Ask questions about specific chapters
+
+**Example Workflow:**
+```
+Output folder: book_output/
+├── chapter_01.pdf  → Upload to NotebookLM
+├── chapter_02.pdf  → Upload to NotebookLM  
+├── chapter_03.pdf  → Upload to NotebookLM
+└── ...
+
+NotebookLM will create Audio Overviews, summaries, and answer questions
+about your content using Gemini's AI capabilities.
 ```
 
-Learn more: [notebooklm.google](https://notebooklm.google/)
+**Note:** NotebookLM doesn't have a public Python API for creating notebooks programmatically. The free version is used through the web interface. For enterprise/automated use, Google Cloud offers [NotebookLM Enterprise APIs](https://cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs).
 
 ## Features
 
